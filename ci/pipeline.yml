@@ -16,9 +16,9 @@ jobs:
         file: concourse-ci-node/ci/tasks/install-deps.yml
         input_mapping: 
           source-code: concourse-ci-node
-          
-      - task: transpile
-        file: concourse-ci-node/ci/tasks/transpile.yml
+
+      - task: lint
+        file: concourse-ci-node/ci/tasks/lint.yml
         input_mapping:
           source-code: concourse-ci-node
 
@@ -26,3 +26,8 @@ jobs:
         file: concourse-ci-node/ci/tasks/unit-test.yml
         input_mapping:
             source-code: concourse-ci-node
+          
+      - task: transpile
+        file: concourse-ci-node/ci/tasks/transpile.yml
+        input_mapping:
+          source-code: concourse-ci-node
