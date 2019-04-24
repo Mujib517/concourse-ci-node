@@ -11,7 +11,8 @@ jobs:
     plan:
       - get: concourse-ci-node
         trigger: true
-    - task: install-deps
-      file: concourse-ci-node/ci/tasks/install-deps.yml
-      input_mapping: 
-        source-code: concourse-ci-node
+
+      - task: install-deps
+        file: concourse-ci-node/ci/tasks/install-deps.yml
+        input_mapping: 
+          source-code: concourse-ci-node
