@@ -4,5 +4,7 @@ set -eux
 cd source-code
 ln -s node_modules
 
-npm test
+ls
+
+npm run test
 
