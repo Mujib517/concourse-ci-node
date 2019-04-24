@@ -7,7 +7,7 @@ image_resource:
     tag: 10.13.0
 
 inputs:
-  - name: source_code
+  - name: source-code
   - name: node_modules
 
 run:
