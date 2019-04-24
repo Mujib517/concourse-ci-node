@@ -1,0 +1,17 @@
+resources:
+  - name: concourse-ci-node
+    type: git
+    source: 
+      uri: https://github.com/Mujib517/concourse-ci-node
+      branch: master
+
+jobs:
+  - name: build
+    serial: true
+    plan:
+      - get: concourse-ci-node
+        trigger: true
+    - task: install-deps
+      file: concourse-ci-node/ci/tasks/install-deps.yml
+      input_mapping: 
+        source-code: concourse-ci-node
