@@ -11,4 +11,4 @@ inputs:
   - name: node_modules
 
 run:
-  path: source-code/ci/scripts/install-deps.sh
+  path: source-code/ci/scripts/lint.sh
