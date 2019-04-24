@@ -8,7 +8,7 @@ image_resource:
 
 inputs:
   - name: source-code
-  - node_modules: node_modules
+  - name: node_modules
 
 outputs:
   - name: dist
