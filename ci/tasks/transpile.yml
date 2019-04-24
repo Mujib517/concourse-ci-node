@@ -8,9 +8,10 @@ image_resource:
 
 inputs:
   - name: source-code
+  - name: node_modules
 
 outputs:
-  - name: node_modules
+  - name: dist
 
 run:
   path: source-code/ci/scripts/transpile.sh
