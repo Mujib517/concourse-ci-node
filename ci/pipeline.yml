@@ -21,3 +21,4 @@ jobs:
         file: concourse-ci-node/ci/tasks/transpile.yml
         input_mapping:
           source-code: concourse-ci-node
+          node_modules: node_modules
