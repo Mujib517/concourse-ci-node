@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "tslint --fix -t codeFrame '{test,src}/**/*.ts'",
     "build": "tsc",
     "dev": "nodemon -L --exec ts-node ./src/index.ts",
     "start": "node dist/index.js",
@@ -23,6 +24,7 @@
     "nodemon": "^1.18.11",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   }
 }

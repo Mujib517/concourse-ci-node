@@ -1,10 +1,10 @@
 class Math {
-    add(a, b) {
+    public add(a, b) {
         return a + b;
     }
 
-    sub(a,b){
-        return a-b;
+    public sub(a, b) {
+        return a - b;
     }
 }
 
