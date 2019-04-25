@@ -1,0 +1,14 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:  
+    repository: python
+    tag: latest
+
+inputs:
+  - name: source-code
+  - name: node_modules
+
+run:
+  path: source-code/ci/scripts/static-analysis.sh

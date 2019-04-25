@@ -21,6 +21,11 @@ jobs:
         file: concourse-ci-node/ci/tasks/lint.yml
         input_mapping:
           source-code: concourse-ci-node
+      
+      - task: static-analysis
+        file: concourse-ci-node/ci/tasks/static-analysis.yml
+        input_mapping:
+          source-code: concourse-ci-node
 
       - task: unit-test
         file: concourse-ci-node/ci/tasks/unit-test.yml
