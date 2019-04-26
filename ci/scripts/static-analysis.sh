@@ -4,6 +4,8 @@ set -eux
 cd source-code
 ln -s ../node_modules
 
-pip install nodejsscan
+nodejsscan -d src -o results.json
 
-nodejsscan -d src
+jq -r .total_count.mis results.json
+jq -r .total_count.good results.json
+jq -r .total_count.sec results.json
