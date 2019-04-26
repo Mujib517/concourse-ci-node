@@ -6,10 +6,19 @@ ln -s ../node_modules
 
 nodejsscan -d src -o results
 
-missing_heders = jq -r .total_count.mis results.json
-security_issues = jq -r .total_count.sec results.json
+missing_headers="$(jq -r .total_count.mis results.json)"
+security_issues="$(jq -r .total_count.sec results.json)"
 
-if [ "$missing_heders" -ge 0 ]; then exit 1
-if [ "$security_issues" -ge 0 ]; then exit 1
+if [ $missing_headers -gt 0 ] 
+then 
+    echo "missing headers";
+    exit 1
+fi
 
-exit 0;
+if [ $security_issues -gt 0 ] 
+then 
+    echo "security issues found";
+    exit 1
+fi
+
+exit 0
