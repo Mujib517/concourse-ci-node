@@ -6,6 +6,10 @@ ln -s ../node_modules
 
 nodejsscan -d src -o results.json
 
+ls
+
+pwd
+
 jq -r .total_count.mis results.json
 jq -r .total_count.good results.json
 jq -r .total_count.sec results.json
