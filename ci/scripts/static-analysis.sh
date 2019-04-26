@@ -9,7 +9,7 @@ nodejsscan -d src -o results
 missing_headers="$(jq -r .total_count.mis results.json)"
 security_issues="$(jq -r .total_count.sec results.json)"
 
-if [ $missing_headers -gt 0 ] 
+if [ $missing_headers -gt 9 ] 
 then 
     echo "missing headers";
     exit 1
